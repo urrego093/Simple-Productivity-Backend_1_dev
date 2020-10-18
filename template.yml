@@ -93,3 +93,5 @@ Resources:
           OptionName: Subnets
           Value: !Ref 'SubnetId'
         - !Ref "AWS::NoValue"
+  TestQueue:
+    Type: AWS::SQS::Queue

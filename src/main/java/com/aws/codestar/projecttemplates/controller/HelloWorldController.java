@@ -43,13 +43,13 @@ public class HelloWorldController {
                 .queueNamePrefix(queueName).build();
         ListQueuesResponse listQueuesResponse = sqsClient.listQueues(listQueuesRequest);
 
-        if (!listQueuesResponse.hasQueueUrls()) {
-            CreateQueueRequest createQueueRequest = CreateQueueRequest.builder()
-                    .queueName(queueName)
-                    .build();
-
-            sqsClient.createQueue(createQueueRequest);
-        }
+//        if (!listQueuesResponse.hasQueueUrls()) {
+//            CreateQueueRequest createQueueRequest = CreateQueueRequest.builder()
+//                    .queueName(queueName)
+//                    .build();
+//
+//            sqsClient.createQueue(createQueueRequest);
+//        }
 
         return listQueuesResponse.toString();
     }
